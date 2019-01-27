@@ -9,7 +9,7 @@ load_biomaRt <- function() {
 get_ensembl_id <- function(ensembl, symbol) {
     out <- getBM(attributes=c('ensembl_gene_id_version'), filters='external_gene_name', values=c(symbol), mart=ensembl)
     id <- as.character(out$ensembl_gene_id_version)
-    return(id)
+    return(id[length(id)])
 }
 
 get_regulators <- function(ensembl, gene_symbol, upstream=1, downstream=1) {
