@@ -1,7 +1,7 @@
 library(httr)
 library(jsonlite)
 
-query.geneshot <- function(terms, type=c("generif", "autorif")) {
+query_geneshot <- function(terms, type=c("generif", "autorif")) {
     type <- match.arg(type)
 
     if (type == "generif") {
@@ -36,5 +36,5 @@ query.geneshot <- function(terms, type=c("generif", "autorif")) {
 }
 
 # Example
-df <- query.geneshot(terms=c("breast cancer", "mammary tissue"))
+df <- query_geneshot(terms=c("breast cancer", "mammary tissue"))
                                        
