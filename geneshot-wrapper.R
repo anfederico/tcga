@@ -34,3 +34,7 @@ query.geneshot <- function(terms, type=c("generif", "autorif")) {
     
     return(df)
 }
+
+# Example
+df <- query.geneshot(terms=c("breast cancer", "mammary tissue"))
+                                       
